@@ -1,0 +1,16 @@
+__default__:
+    mem: 8g
+    partition: quick,norm
+    time: '4:00:00'
+    scratch: lscratch:1 
+
+igv_snapshot:
+    mem: 64g
+    partition: quick,norm
+    time: '4:00:00'
+
+create_pdf:
+    mem: 64g
+    partition: quick,norm
+    time: '4:00:00'
+

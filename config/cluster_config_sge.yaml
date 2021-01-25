@@ -1,0 +1,11 @@
+__default__:
+    mem: 8g
+    queue: 'all.q,research.q'
+
+igv_snapshot:
+    mem: 64g
+    queue: 'all.q,research.q'
+
+create_pdf:
+    mem: 64g
+    queue: 'all.q,research.q'

@@ -1,0 +1,3 @@
+WildcardError in line 64 of /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/Snakefile:
+No values given for wildcard 'sample'.
+  File "/gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/Snakefile", line 64, in <module>
