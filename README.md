@@ -10,8 +10,8 @@ This snakemake pipeline is for automatically creating IGV snapshots of multiple 
 ## User's guide
 ### I. Input requirements
 * Edited config/config.yaml
-* Bam files: {sample-ID}*.bam, multiple files allowed for each sample
-* Bed files: {sample-ID}.bed, only one file allowed for each sample
+* Bam files: {sample}*.bam, multiple files allowed for each sample or group. 
+* Bed files: {sample}.bed, only one file allowed for each sample or group
 * Reference genome file
 ### II. Bed file format
 Three headerless columns: chromosome, start position, end position
@@ -39,8 +39,8 @@ Optional parameters:
 |--- user/defined/output_dir/
    |--- IGV_Snapshots/
       |--- pdf/               # Final pdf file
-      |--- merge_true/        # The merged snapshot of each sample
-      |--- {sample}/          # All snapshots of each sample
+      |--- merge_true/        # The merged snapshot of each sample or group
+      |--- {sample}/          # All snapshots of each sample or group
 ```
 ### V. To run on an HPC
 * Access graphic connection to the HPC system using ssh -Y, or using tools like NoMachine (NX). 
