@@ -38,8 +38,8 @@ Optional parameters:
 |--- user/defined/output_dir/
    |--- IGV_Snapshots/
       |--- pdf/               # Final pdf file
-      |--- merge_true/        # The merged snapshot for each sample
-      |--- {sample}/          # All snapshots for each sample
+      |--- merge_true/        # The merged snapshot of each sample
+      |--- {sample}/          # All snapshots of each sample
 ```
 ### V. To run on an HPC
 * Access graphic connection to the HPC system using ssh -Y, or using tools like NoMachine (NX).
