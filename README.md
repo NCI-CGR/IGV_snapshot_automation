@@ -44,5 +44,5 @@ Optional parameters:
 ### V. To run on an HPC
 * Access graphic connection to the HPC system using ssh -Y, or using tools like NoMachine (NX).
 * Edit config/config.yaml and save
-* To run on an HPC using Slurm Jjb scheduler like NIH Biowulf: run sbatch.sh; look in log directory for logs for each rule.
+* To run on an HPC using Slurm job scheduler like NIH Biowulf: run sbatch.sh; look in log directory for logs for each rule.
 * To run on an HPC using SGE job scheduler like Cgems: run qsub.sh; look in log directory for logs for each rule.
