@@ -10,9 +10,9 @@ This snakemake pipeline can be used to automatically create IGV snapshots for mu
 ## user's guide
 ### I. Input requirements
 * Edited config.yaml in directory: config/
-* bam files: {sample-ID}*.bam, multiple files allowed for each sample
-* bed files: {sample-ID}.bed, only one file allowed for each sample
-* reference genome file
+* Bam files: {sample-ID}*.bam, multiple files allowed for each sample
+* Bed files: {sample-ID}.bed, only one file allowed for each sample
+* Reference genome file
 ### II. Bed file format
 Three headerless columns: chromosome, start position, end position
 Example:
