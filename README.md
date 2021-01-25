@@ -15,6 +15,7 @@ This snakemake pipeline is for automatically creating IGV snapshots of multiple 
 * Reference genome file
 ### II. Bed file format
 Three headerless columns: chromosome, start position, end position
+
 Example:
 ```bash
 HPV31_Ref 4319 4339
