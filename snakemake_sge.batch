@@ -1,0 +1,13 @@
+#!/bin/bash
+mkdir -p log
+
+snakemake --unlock
+
+snakemake --cluster-config config/cluster_config_sge.yaml \
+          --cluster "qsub -pe by_node {threads} \
+          -q {cluster.queue} -V -j y \
+          -l mem_free={cluster.mem} \
+          -o log/" \
+          --jobs 500 --latency-wait 120 \
+          --keep-going \
+          --rerun-incomplete

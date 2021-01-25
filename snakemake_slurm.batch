@@ -1,0 +1,9 @@
+#!/bin/bash
+mkdir -p log
+
+module load snakemake java/1.8.0_211 octave || exit 1
+
+snakemake --unlock
+
+sbcmd="sbatch --cpus-per-task={threads} --time={cluster.time} --mem={cluster.mem} --gres={cluster.scratch} --output=log/snakejob_%j.out"
+snakemake -pr --cluster-config config/cluster_config_slurm.yaml --cluster "$sbcmd" --keep-going --jobs 50 --latency-wait 120 all

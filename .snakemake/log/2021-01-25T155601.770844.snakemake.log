@@ -1,0 +1,7 @@
+Building DAG of jobs...
+File path output/IGV_Snapshots/merge//data/CGR.png contains double '/'. This is likely unintended. It can also lead to inconsistent results of the file-matching approach used by Snakemake.
+File path /data/CGR_integration/hpv_igv/data/09272019_serial/igv_bed//data/CGR.bed contains double '/'. This is likely unintended. It can also lead to inconsistent results of the file-matching approach used by Snakemake.
+File path output/IGV_Snapshots/merge//data/CGR.png contains double '/'. This is likely unintended. It can also lead to inconsistent results of the file-matching approach used by Snakemake.
+MissingInputException in line 37 of /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/Snakefile:
+Missing input files for rule igv_snapshot:
+/data/CGR_integration/hpv_igv/data/09272019_serial/igv_bed//data/CGR.bed

@@ -1,0 +1,544 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 50
+Job counts:
+	count	jobs
+	1	all
+	1	create_pdf
+	13	igv_snapshot
+	15
+
+[Mon Jan 25 14:05:52 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1076.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1076.bed
+    output: output/IGV_Snapshots/merge/UMC1076.png
+    jobid: 11
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1076.png
+    wildcards: sample=UMC1076
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1076 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1076.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1076.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1076 2> log/UMC1076_igv.err
+          if ls output/IGV_Snapshots/UMC1076/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1076' -tile 1x output/IGV_Snapshots/UMC1076/*.png output/IGV_Snapshots/merge/UMC1076.png 2> log/UMC1076_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1076.png output//IGV_Snapshots/merge_true/UMC1076.png 2>log/UMC1076_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1076.png 
+          fi
+          
+Submitted job 11 with external jobid '6797535'.
+
+[Mon Jan 25 14:05:54 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1082.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1082.bed
+    output: output/IGV_Snapshots/merge/UMC1082.png
+    jobid: 13
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1082.png
+    wildcards: sample=UMC1082
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1082 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1082.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1082.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1082 2> log/UMC1082_igv.err
+          if ls output/IGV_Snapshots/UMC1082/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1082' -tile 1x output/IGV_Snapshots/UMC1082/*.png output/IGV_Snapshots/merge/UMC1082.png 2> log/UMC1082_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1082.png output//IGV_Snapshots/merge_true/UMC1082.png 2>log/UMC1082_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1082.png 
+          fi
+          
+Submitted job 13 with external jobid '6797536'.
+
+[Mon Jan 25 14:05:55 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1086.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1086.bed
+    output: output/IGV_Snapshots/merge/UMC1086.png
+    jobid: 14
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1086.png
+    wildcards: sample=UMC1086
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1086 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1086.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1086.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1086 2> log/UMC1086_igv.err
+          if ls output/IGV_Snapshots/UMC1086/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1086' -tile 1x output/IGV_Snapshots/UMC1086/*.png output/IGV_Snapshots/merge/UMC1086.png 2> log/UMC1086_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1086.png output//IGV_Snapshots/merge_true/UMC1086.png 2>log/UMC1086_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1086.png 
+          fi
+          
+Submitted job 14 with external jobid '6797537'.
+
+[Mon Jan 25 14:05:56 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1007.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1007.bed
+    output: output/IGV_Snapshots/merge/UMC1007.png
+    jobid: 2
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1007.png
+    wildcards: sample=UMC1007
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1007 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1007.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1007.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1007 2> log/UMC1007_igv.err
+          if ls output/IGV_Snapshots/UMC1007/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1007' -tile 1x output/IGV_Snapshots/UMC1007/*.png output/IGV_Snapshots/merge/UMC1007.png 2> log/UMC1007_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1007.png output//IGV_Snapshots/merge_true/UMC1007.png 2>log/UMC1007_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1007.png 
+          fi
+          
+Submitted job 2 with external jobid '6797538'.
+
+[Mon Jan 25 14:05:58 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1024.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1024.bed
+    output: output/IGV_Snapshots/merge/UMC1024.png
+    jobid: 4
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1024.png
+    wildcards: sample=UMC1024
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1024 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1024.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1024.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1024 2> log/UMC1024_igv.err
+          if ls output/IGV_Snapshots/UMC1024/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1024' -tile 1x output/IGV_Snapshots/UMC1024/*.png output/IGV_Snapshots/merge/UMC1024.png 2> log/UMC1024_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1024.png output//IGV_Snapshots/merge_true/UMC1024.png 2>log/UMC1024_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1024.png 
+          fi
+          
+Submitted job 4 with external jobid '6797539'.
+
+[Mon Jan 25 14:05:59 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1055.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1055.bed
+    output: output/IGV_Snapshots/merge/UMC1055.png
+    jobid: 6
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1055.png
+    wildcards: sample=UMC1055
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1055 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1055.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1055.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1055 2> log/UMC1055_igv.err
+          if ls output/IGV_Snapshots/UMC1055/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1055' -tile 1x output/IGV_Snapshots/UMC1055/*.png output/IGV_Snapshots/merge/UMC1055.png 2> log/UMC1055_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1055.png output//IGV_Snapshots/merge_true/UMC1055.png 2>log/UMC1055_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1055.png 
+          fi
+          
+Submitted job 6 with external jobid '6797540'.
+
+[Mon Jan 25 14:06:00 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1071.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1071.bed
+    output: output/IGV_Snapshots/merge/UMC1071.png
+    jobid: 8
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1071.png
+    wildcards: sample=UMC1071
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1071 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1071.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1071.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1071 2> log/UMC1071_igv.err
+          if ls output/IGV_Snapshots/UMC1071/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1071' -tile 1x output/IGV_Snapshots/UMC1071/*.png output/IGV_Snapshots/merge/UMC1071.png 2> log/UMC1071_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1071.png output//IGV_Snapshots/merge_true/UMC1071.png 2>log/UMC1071_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1071.png 
+          fi
+          
+Submitted job 8 with external jobid '6797541'.
+
+[Mon Jan 25 14:06:01 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1074.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1074.bed
+    output: output/IGV_Snapshots/merge/UMC1074.png
+    jobid: 10
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1074.png
+    wildcards: sample=UMC1074
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1074 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1074.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1074.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1074 2> log/UMC1074_igv.err
+          if ls output/IGV_Snapshots/UMC1074/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1074' -tile 1x output/IGV_Snapshots/UMC1074/*.png output/IGV_Snapshots/merge/UMC1074.png 2> log/UMC1074_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1074.png output//IGV_Snapshots/merge_true/UMC1074.png 2>log/UMC1074_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1074.png 
+          fi
+          
+Submitted job 10 with external jobid '6797543'.
+
+[Mon Jan 25 14:06:03 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1081.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1081.bed
+    output: output/IGV_Snapshots/merge/UMC1081.png
+    jobid: 12
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1081.png
+    wildcards: sample=UMC1081
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1081 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1081.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1081.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1081 2> log/UMC1081_igv.err
+          if ls output/IGV_Snapshots/UMC1081/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1081' -tile 1x output/IGV_Snapshots/UMC1081/*.png output/IGV_Snapshots/merge/UMC1081.png 2> log/UMC1081_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1081.png output//IGV_Snapshots/merge_true/UMC1081.png 2>log/UMC1081_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1081.png 
+          fi
+          
+Submitted job 12 with external jobid '6797546'.
+
+[Mon Jan 25 14:06:04 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1010.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1010.bed
+    output: output/IGV_Snapshots/merge/UMC1010.png
+    jobid: 3
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1010.png
+    wildcards: sample=UMC1010
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1010 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1010.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1010.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1010 2> log/UMC1010_igv.err
+          if ls output/IGV_Snapshots/UMC1010/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1010' -tile 1x output/IGV_Snapshots/UMC1010/*.png output/IGV_Snapshots/merge/UMC1010.png 2> log/UMC1010_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1010.png output//IGV_Snapshots/merge_true/UMC1010.png 2>log/UMC1010_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1010.png 
+          fi
+          
+Submitted job 3 with external jobid '6797549'.
+
+[Mon Jan 25 14:06:05 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1032.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1032.bed
+    output: output/IGV_Snapshots/merge/UMC1032.png
+    jobid: 5
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1032.png
+    wildcards: sample=UMC1032
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1032 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1032.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1032.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1032 2> log/UMC1032_igv.err
+          if ls output/IGV_Snapshots/UMC1032/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1032' -tile 1x output/IGV_Snapshots/UMC1032/*.png output/IGV_Snapshots/merge/UMC1032.png 2> log/UMC1032_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1032.png output//IGV_Snapshots/merge_true/UMC1032.png 2>log/UMC1032_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1032.png 
+          fi
+          
+Submitted job 5 with external jobid '6797551'.
+
+[Mon Jan 25 14:06:06 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1056.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1056.bed
+    output: output/IGV_Snapshots/merge/UMC1056.png
+    jobid: 7
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1056.png
+    wildcards: sample=UMC1056
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1056 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1056.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1056.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1056 2> log/UMC1056_igv.err
+          if ls output/IGV_Snapshots/UMC1056/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1056' -tile 1x output/IGV_Snapshots/UMC1056/*.png output/IGV_Snapshots/merge/UMC1056.png 2> log/UMC1056_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1056.png output//IGV_Snapshots/merge_true/UMC1056.png 2>log/UMC1056_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1056.png 
+          fi
+          
+Submitted job 7 with external jobid '6797552'.
+
+[Mon Jan 25 14:06:08 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1072.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1072.bed
+    output: output/IGV_Snapshots/merge/UMC1072.png
+    jobid: 9
+    reason: Missing output files: output/IGV_Snapshots/merge/UMC1072.png
+    wildcards: sample=UMC1072
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1072 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1072.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1072.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1072 2> log/UMC1072_igv.err
+          if ls output/IGV_Snapshots/UMC1072/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1072' -tile 1x output/IGV_Snapshots/UMC1072/*.png output/IGV_Snapshots/merge/UMC1072.png 2> log/UMC1072_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1072.png output//IGV_Snapshots/merge_true/UMC1072.png 2>log/UMC1072_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1072.png 
+          fi
+          
+Submitted job 9 with external jobid '6797554'.
+[Mon Jan 25 14:10:59 2021]
+Error in rule igv_snapshot:
+    jobid: 6
+    output: output/IGV_Snapshots/merge/UMC1055.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1055 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1055.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1055.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1055 2> log/UMC1055_igv.err
+          if ls output/IGV_Snapshots/UMC1055/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1055' -tile 1x output/IGV_Snapshots/UMC1055/*.png output/IGV_Snapshots/merge/UMC1055.png 2> log/UMC1055_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1055.png output//IGV_Snapshots/merge_true/UMC1055.png 2>log/UMC1055_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1055.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797540
+
+Error executing rule igv_snapshot on cluster (jobid: 6, external: 6797540, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.6.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:10:59 2021]
+Error in rule igv_snapshot:
+    jobid: 3
+    output: output/IGV_Snapshots/merge/UMC1010.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1010 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1010.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1010.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1010 2> log/UMC1010_igv.err
+          if ls output/IGV_Snapshots/UMC1010/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1010' -tile 1x output/IGV_Snapshots/UMC1010/*.png output/IGV_Snapshots/merge/UMC1010.png 2> log/UMC1010_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1010.png output//IGV_Snapshots/merge_true/UMC1010.png 2>log/UMC1010_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1010.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797549
+
+Error executing rule igv_snapshot on cluster (jobid: 3, external: 6797549, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.3.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:10 2021]
+Error in rule igv_snapshot:
+    jobid: 13
+    output: output/IGV_Snapshots/merge/UMC1082.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1082 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1082.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1082.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1082 2> log/UMC1082_igv.err
+          if ls output/IGV_Snapshots/UMC1082/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1082' -tile 1x output/IGV_Snapshots/UMC1082/*.png output/IGV_Snapshots/merge/UMC1082.png 2> log/UMC1082_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1082.png output//IGV_Snapshots/merge_true/UMC1082.png 2>log/UMC1082_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1082.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797536
+
+Error executing rule igv_snapshot on cluster (jobid: 13, external: 6797536, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.13.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:10 2021]
+Error in rule igv_snapshot:
+    jobid: 14
+    output: output/IGV_Snapshots/merge/UMC1086.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1086 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1086.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1086.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1086 2> log/UMC1086_igv.err
+          if ls output/IGV_Snapshots/UMC1086/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1086' -tile 1x output/IGV_Snapshots/UMC1086/*.png output/IGV_Snapshots/merge/UMC1086.png 2> log/UMC1086_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1086.png output//IGV_Snapshots/merge_true/UMC1086.png 2>log/UMC1086_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1086.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797537
+
+Error executing rule igv_snapshot on cluster (jobid: 14, external: 6797537, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.14.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:10 2021]
+Error in rule igv_snapshot:
+    jobid: 2
+    output: output/IGV_Snapshots/merge/UMC1007.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1007 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1007.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1007.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1007 2> log/UMC1007_igv.err
+          if ls output/IGV_Snapshots/UMC1007/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1007' -tile 1x output/IGV_Snapshots/UMC1007/*.png output/IGV_Snapshots/merge/UMC1007.png 2> log/UMC1007_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1007.png output//IGV_Snapshots/merge_true/UMC1007.png 2>log/UMC1007_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1007.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797538
+
+Error executing rule igv_snapshot on cluster (jobid: 2, external: 6797538, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.2.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:10 2021]
+Error in rule igv_snapshot:
+    jobid: 4
+    output: output/IGV_Snapshots/merge/UMC1024.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1024 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1024.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1024.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1024 2> log/UMC1024_igv.err
+          if ls output/IGV_Snapshots/UMC1024/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1024' -tile 1x output/IGV_Snapshots/UMC1024/*.png output/IGV_Snapshots/merge/UMC1024.png 2> log/UMC1024_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1024.png output//IGV_Snapshots/merge_true/UMC1024.png 2>log/UMC1024_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1024.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797539
+
+Error executing rule igv_snapshot on cluster (jobid: 4, external: 6797539, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.4.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:10 2021]
+Error in rule igv_snapshot:
+    jobid: 8
+    output: output/IGV_Snapshots/merge/UMC1071.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1071 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1071.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1071.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1071 2> log/UMC1071_igv.err
+          if ls output/IGV_Snapshots/UMC1071/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1071' -tile 1x output/IGV_Snapshots/UMC1071/*.png output/IGV_Snapshots/merge/UMC1071.png 2> log/UMC1071_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1071.png output//IGV_Snapshots/merge_true/UMC1071.png 2>log/UMC1071_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1071.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797541
+
+Error executing rule igv_snapshot on cluster (jobid: 8, external: 6797541, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.8.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:10 2021]
+Error in rule igv_snapshot:
+    jobid: 10
+    output: output/IGV_Snapshots/merge/UMC1074.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1074 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1074.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1074.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1074 2> log/UMC1074_igv.err
+          if ls output/IGV_Snapshots/UMC1074/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1074' -tile 1x output/IGV_Snapshots/UMC1074/*.png output/IGV_Snapshots/merge/UMC1074.png 2> log/UMC1074_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1074.png output//IGV_Snapshots/merge_true/UMC1074.png 2>log/UMC1074_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1074.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797543
+
+Error executing rule igv_snapshot on cluster (jobid: 10, external: 6797543, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.10.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:10 2021]
+Error in rule igv_snapshot:
+    jobid: 12
+    output: output/IGV_Snapshots/merge/UMC1081.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1081 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1081.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1081.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1081 2> log/UMC1081_igv.err
+          if ls output/IGV_Snapshots/UMC1081/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1081' -tile 1x output/IGV_Snapshots/UMC1081/*.png output/IGV_Snapshots/merge/UMC1081.png 2> log/UMC1081_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1081.png output//IGV_Snapshots/merge_true/UMC1081.png 2>log/UMC1081_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1081.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797546
+
+Error executing rule igv_snapshot on cluster (jobid: 12, external: 6797546, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.12.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:11 2021]
+Error in rule igv_snapshot:
+    jobid: 9
+    output: output/IGV_Snapshots/merge/UMC1072.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1072 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1072.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1072.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1072 2> log/UMC1072_igv.err
+          if ls output/IGV_Snapshots/UMC1072/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1072' -tile 1x output/IGV_Snapshots/UMC1072/*.png output/IGV_Snapshots/merge/UMC1072.png 2> log/UMC1072_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1072.png output//IGV_Snapshots/merge_true/UMC1072.png 2>log/UMC1072_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1072.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797554
+
+Error executing rule igv_snapshot on cluster (jobid: 9, external: 6797554, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.9.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:21 2021]
+Error in rule igv_snapshot:
+    jobid: 5
+    output: output/IGV_Snapshots/merge/UMC1032.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1032 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1032.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1032.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1032 2> log/UMC1032_igv.err
+          if ls output/IGV_Snapshots/UMC1032/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1032' -tile 1x output/IGV_Snapshots/UMC1032/*.png output/IGV_Snapshots/merge/UMC1032.png 2> log/UMC1032_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1032.png output//IGV_Snapshots/merge_true/UMC1032.png 2>log/UMC1032_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1032.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797551
+
+Error executing rule igv_snapshot on cluster (jobid: 5, external: 6797551, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.5.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:11:21 2021]
+Error in rule igv_snapshot:
+    jobid: 7
+    output: output/IGV_Snapshots/merge/UMC1056.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1056 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1056.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1056.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1056 2> log/UMC1056_igv.err
+          if ls output/IGV_Snapshots/UMC1056/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1056' -tile 1x output/IGV_Snapshots/UMC1056/*.png output/IGV_Snapshots/merge/UMC1056.png 2> log/UMC1056_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1056.png output//IGV_Snapshots/merge_true/UMC1056.png 2>log/UMC1056_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1056.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797552
+
+Error executing rule igv_snapshot on cluster (jobid: 7, external: 6797552, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.7.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+[Mon Jan 25 14:12:01 2021]
+Error in rule igv_snapshot:
+    jobid: 11
+    output: output/IGV_Snapshots/merge/UMC1076.png
+    shell:
+        
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1076 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1076.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1076.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1076 2> log/UMC1076_igv.err
+          if ls output/IGV_Snapshots/UMC1076/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1076' -tile 1x output/IGV_Snapshots/UMC1076/*.png output/IGV_Snapshots/merge/UMC1076.png 2> log/UMC1076_merge.err
+          mkdir -p merge_true
+          cp output/IGV_Snapshots/merge/UMC1076.png output//IGV_Snapshots/merge_true/UMC1076.png 2>log/UMC1076_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1076.png 
+          fi
+          
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 6797535
+
+Error executing rule igv_snapshot on cluster (jobid: 11, external: 6797535, jobscript: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/tmp.6oe2gto_/snakejob.igv_snapshot.11.sh). For error details see the cluster log and the log files of the involved rule(s).
+Job failed, going on with independent jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/.snakemake/log/2021-01-25T140552.700896.snakemake.log

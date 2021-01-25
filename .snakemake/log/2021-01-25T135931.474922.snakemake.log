@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 38 of /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/Snakefile:
+Missing input files for rule igv_snapshot:
+/data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1007*.bam
+/data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1007*.bed

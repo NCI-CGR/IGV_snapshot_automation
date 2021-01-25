@@ -1,0 +1,450 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	igv_snapshot
+	1
+
+[Mon Jan 25 14:32:06 2021]
+rule igv_snapshot:
+    input: /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1056.bam, /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1056.bed
+    output: output/IGV_Snapshots/merge/UMC1056.png
+    jobid: 0
+    wildcards: sample=UMC1056
+    threads: 4
+
+
+          python /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/make_IGV_snapshots.py -mem 16000 -ht 100 -bin /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -o output/IGV_Snapshots/UMC1056 /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1056.bam -r /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1056.bed -g /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta -s -suffix UMC1056 2> log/UMC1056_igv.err
+          mkdir -p output/IGV_Snapshots/merge
+          if ls output/IGV_Snapshots/UMC1056/*.png 1> /dev/null 2>&1; then 
+          magick montage -label '%f' -pointsize 24 -geometry 1920x900+2+2 -title 'UMC1056' -tile 1x output/IGV_Snapshots/UMC1056/*.png output/IGV_Snapshots/merge/UMC1056.png 2> log/UMC1056_merge.err
+          mkdir -p output/IGV_Snapshots/merge_true
+          cp output/IGV_Snapshots/merge/UMC1056.png output//IGV_Snapshots/merge_true/UMC1056.png 2>log/UMC1056_cp.err
+          else
+          touch output/IGV_Snapshots/merge/UMC1056.png 
+          fi
+          
+
+~~~ IGV SNAPSHOT AUTOMATOR ~~~
+
+Reference genome:
+/data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta
+
+Track height:
+100
+
+IGV binary file:
+/data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar
+
+Output directory will be:
+output/IGV_Snapshots/UMC1056
+
+Batchscript file will be:
+output/IGV_Snapshots/UMC1056/IGV_snapshots.bat
+
+Region file:
+/data/CGR_integration/hpv_igv/data/08282019_methylation/meth/igv_bed/UMC1056.bed
+
+Input files to snapshot:
+
+/data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1056.bam
+
+Making the output directory...
+
+Writing IGV batch script to file:
+output/IGV_Snapshots/UMC1056/IGV_snapshots.bat
+
+
+Getting regions from BED file...
+
+Read 31 regions
+
+Open Xvfb port found on:
+1
+
+
+IGV command is:
+xvfb-run -a --server-args='-screen 0 1920x1280x24'xrandr java -Xmx16000m -jar /data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/bin/IGV_2.3.81/igv.jar -b output/IGV_Snapshots/UMC1056/IGV_snapshots.bat
+
+
+Current time is:
+2021-01-25 14:32:06.906307
+
+
+Running the IGV command...
+INFO [2021-01-25 14:32:11,159]  [DirectoryManager.java:169] [main]  IGV Directory: /home/daij/igv
+INFO [2021-01-25 14:32:11,159] [DirectoryManager.java:169]  IGV Directory: /home/daij/igv
+INFO [2021-01-25 14:32:11,166]  [Main.java:133] [main]  Startup  IGV Version 2.3.81 (127)08/30/2016 02:20 PM
+INFO [2021-01-25 14:32:11,166]  [Main.java:134] [main]  Java 1.8.0_211
+INFO [2021-01-25 14:32:11,166]  [DirectoryManager.java:72] [main]  Fetching user directory... 
+INFO [2021-01-25 14:32:11,335]  [Main.java:135] [main]  Default User Directory: /home/daij
+INFO [2021-01-25 14:32:11,335]  [Main.java:136] [main]  OS: Linux
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+
+(process:72727): dconf-CRITICAL **: unable to create directory '/run/user/37498/dconf': Permission denied.  dconf will not work properly.
+INFO [2021-01-25 14:32:12,068]  [Main.java:184] [main]  A later version of IGV is available (2.7.22.7.2)
+INFO [2021-01-25 14:32:26,905]  [GenomeManager.java:145] [main]  Loading genome: /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta
+INFO [2021-01-25 14:32:26,934]  [GenomeManager.java:192] [main]  Genome loaded.  id= /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta
+INFO [2021-01-25 14:32:27,117]  [CommandListener.java:106] [Thread-6]  Listening on port 60151
+INFO [2021-01-25 14:32:27,487]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: new
+
+INFO [2021-01-25 14:32:29,936]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:29,936]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: genome /data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta
+
+INFO [2021-01-25 14:32:31,948]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:31,948]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshotDirectory output/IGV_Snapshots/UMC1056
+
+INFO [2021-01-25 14:32:33,962]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:33,962]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: load /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1056.bam
+
+INFO [2021-01-25 14:32:33,964]  [IGV.java:1700] [pool-1-thread-1]  Loading 1 resources.
+INFO [2021-01-25 14:32:33,965]  [TrackLoader.java:120] [pool-1-thread-1]  Loading resource, path /data/CGR_integration/hpv_igv/data/08282019_methylation/meth/bam/UMC1056.bam
+INFO [2021-01-25 14:32:36,232]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:36,232]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: maxPanelHeight 100
+
+INFO [2021-01-25 14:32:36,240]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto HPV35:7879-70794
+
+INFO [2021-01-25 14:32:36,253]  [MessageUtils.java:74] [pool-1-thread-1]  Cannot find feature or locus: HPV35:7879-70794
+INFO [2021-01-25 14:32:38,268]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:38,268]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:32:40,285]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:40,285]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot HPV35_7879_70794_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/HPV35_7879_70794_h100UMC1056.png
+INFO [2021-01-25 14:32:42,392]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:42,393]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto HPV39:7833-5395
+
+INFO [2021-01-25 14:32:42,398]  [MessageUtils.java:74] [pool-1-thread-1]  Cannot find feature or locus: HPV39:7833-5395
+INFO [2021-01-25 14:32:44,401]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:44,402]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:32:46,415]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:46,416]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot HPV39_7833_5395_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/HPV39_7833_5395_h100UMC1056.png
+INFO [2021-01-25 14:32:48,526]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:48,526]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto HPV51:7808-321
+
+INFO [2021-01-25 14:32:48,530]  [MessageUtils.java:74] [pool-1-thread-1]  Cannot find feature or locus: HPV51:7808-321
+INFO [2021-01-25 14:32:50,536]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:50,537]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:32:52,547]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:52,547]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot HPV51_7808_321_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/HPV51_7808_321_h100UMC1056.png
+INFO [2021-01-25 14:32:54,603]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:54,604]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto HPV59:7896-6039
+
+INFO [2021-01-25 14:32:54,608]  [MessageUtils.java:74] [pool-1-thread-1]  Cannot find feature or locus: HPV59:7896-6039
+INFO [2021-01-25 14:32:56,617]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:56,618]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:32:58,629]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:32:58,629]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot HPV59_7896_6039_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/HPV59_7896_6039_h100UMC1056.png
+INFO [2021-01-25 14:33:00,737]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:00,737]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto HPV68a:7822-798
+
+INFO [2021-01-25 14:33:00,740]  [MessageUtils.java:74] [pool-1-thread-1]  Cannot find feature or locus: HPV68a:7822-798
+INFO [2021-01-25 14:33:02,743]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:02,743]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:04,752]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:04,753]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot HPV68a_7822_798_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/HPV68a_7822_798_h100UMC1056.png
+INFO [2021-01-25 14:33:06,800]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:06,800]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto HPV68b:7836-145
+
+INFO [2021-01-25 14:33:06,805]  [MessageUtils.java:74] [pool-1-thread-1]  Cannot find feature or locus: HPV68b:7836-145
+INFO [2021-01-25 14:33:08,811]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:08,811]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:10,817]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:10,817]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot HPV68b_7836_145_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/HPV68b_7836_145_h100UMC1056.png
+INFO [2021-01-25 14:33:12,869]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:12,870]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto Lambda_NEB:48502-100
+
+INFO [2021-01-25 14:33:12,874]  [MessageUtils.java:74] [pool-1-thread-1]  Cannot find feature or locus: Lambda_NEB:48502-100
+INFO [2021-01-25 14:33:14,879]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:14,880]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:16,889]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:16,889]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot Lambda_NEB_48502_100_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/Lambda_NEB_48502_100_h100UMC1056.png
+INFO [2021-01-25 14:33:18,959]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:18,959]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr1:249250621-16730
+
+INFO [2021-01-25 14:33:20,985]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:20,985]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:22,996]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:22,996]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr1_249250621_16730_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr1_249250621_16730_h100UMC1056.png
+INFO [2021-01-25 14:33:25,064]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:25,065]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr2:243199373-16315
+
+INFO [2021-01-25 14:33:27,077]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:27,077]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:29,087]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:29,087]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr2_243199373_16315_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr2_243199373_16315_h100UMC1056.png
+INFO [2021-01-25 14:33:31,136]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:31,136]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr3:198022430-17425
+
+INFO [2021-01-25 14:33:33,139]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:33,140]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:35,148]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:35,148]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr3_198022430_17425_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr3_198022430_17425_h100UMC1056.png
+INFO [2021-01-25 14:33:37,196]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:37,197]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr4:191154276-21011
+
+INFO [2021-01-25 14:33:39,201]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:39,201]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:41,210]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:41,210]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr4_191154276_21011_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr4_191154276_21011_h100UMC1056.png
+INFO [2021-01-25 14:33:43,256]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:43,257]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr5:180915260-18337
+
+INFO [2021-01-25 14:33:45,265]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:45,265]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:47,273]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:47,273]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr5_180915260_18337_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr5_180915260_18337_h100UMC1056.png
+INFO [2021-01-25 14:33:49,326]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:49,326]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr6:171115067-18452
+
+INFO [2021-01-25 14:33:51,337]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:51,337]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:53,348]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:53,348]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr6_171115067_18452_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr6_171115067_18452_h100UMC1056.png
+INFO [2021-01-25 14:33:55,400]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:55,400]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr7:159138663-7425
+
+INFO [2021-01-25 14:33:57,408]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:57,408]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:33:59,416]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:33:59,416]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr7_159138663_7425_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr7_159138663_7425_h100UMC1056.png
+INFO [2021-01-25 14:34:01,468]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:01,468]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr8:146364022-14419
+
+INFO [2021-01-25 14:34:03,472]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:03,472]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:34:05,478]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:05,478]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr8_146364022_14419_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr8_146364022_14419_h100UMC1056.png
+INFO [2021-01-25 14:34:07,535]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:07,535]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr9:141213431-10589
+
+INFO [2021-01-25 14:34:09,543]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:09,544]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:34:11,550]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:11,551]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr9_141213431_10589_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr9_141213431_10589_h100UMC1056.png
+INFO [2021-01-25 14:34:13,611]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:13,611]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr10:135534747-9010
+
+INFO [2021-01-25 14:34:15,620]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:15,620]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:34:17,626]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:17,626]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr10_135534747_9010_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr10_135534747_9010_h100UMC1056.png
+INFO [2021-01-25 14:34:19,677]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:19,677]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr11:135006516-25568
+
+INFO [2021-01-25 14:34:21,688]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:21,688]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:34:23,694]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:23,695]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr11_135006516_25568_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr11_135006516_25568_h100UMC1056.png
+INFO [2021-01-25 14:34:25,743]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:25,744]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr12:133851895-10972
+
+INFO [2021-01-25 14:34:27,750]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:27,750]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:34:29,757]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:29,757]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr12_133851895_10972_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr12_133851895_10972_h100UMC1056.png
+INFO [2021-01-25 14:34:31,804]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:31,804]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr13:115169878-16463
+
+INFO [2021-01-25 14:34:33,814]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:33,814]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:34:35,820]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:35,820]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr13_115169878_16463_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr13_115169878_16463_h100UMC1056.png
+INFO [2021-01-25 14:34:37,866]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:37,867]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr14:107349540-13480
+
+INFO [2021-01-25 14:34:39,873]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:39,874]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:34:41,879]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:41,879]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr14_107349540_13480_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr14_107349540_13480_h100UMC1056.png
+INFO [2021-01-25 14:34:43,925]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:43,925]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr15:102531392-11894
+
+INFO [2021-01-25 14:34:45,937]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:45,937]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:34:47,944]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:47,944]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr15_102531392_11894_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr15_102531392_11894_h100UMC1056.png
+INFO [2021-01-25 14:34:49,990]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:49,990]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr16:90354753-5809
+
+INFO [2021-01-25 14:34:51,997]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:51,997]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:34:54,005]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:54,005]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr16_90354753_5809_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr16_90354753_5809_h100UMC1056.png
+INFO [2021-01-25 14:34:56,052]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:56,052]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr17:81195210-1806
+
+INFO [2021-01-25 14:34:58,060]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:34:58,061]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:35:00,066]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:00,066]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr17_81195210_1806_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr17_81195210_1806_h100UMC1056.png
+INFO [2021-01-25 14:35:02,117]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:02,117]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr18:78077248-2849
+
+INFO [2021-01-25 14:35:04,123]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:04,124]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:35:06,132]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:06,133]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr18_78077248_2849_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr18_78077248_2849_h100UMC1056.png
+INFO [2021-01-25 14:35:08,184]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:08,185]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr19:59128983-9628
+
+INFO [2021-01-25 14:35:10,191]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:10,191]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:35:12,196]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:12,196]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr19_59128983_9628_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr19_59128983_9628_h100UMC1056.png
+INFO [2021-01-25 14:35:14,241]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:14,241]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr20:63025520-2491
+
+INFO [2021-01-25 14:35:16,247]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:16,247]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:35:18,252]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:18,252]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr20_63025520_2491_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr20_63025520_2491_h100UMC1056.png
+INFO [2021-01-25 14:35:20,297]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:20,297]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr21:48129895-4394
+
+INFO [2021-01-25 14:35:22,304]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:22,304]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:35:24,310]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:24,310]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr21_48129895_4394_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr21_48129895_4394_h100UMC1056.png
+INFO [2021-01-25 14:35:26,356]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:26,356]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chr22:51304566-415
+
+INFO [2021-01-25 14:35:28,368]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:28,369]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:35:30,375]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:30,375]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chr22_51304566_415_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chr22_51304566_415_h100UMC1056.png
+INFO [2021-01-25 14:35:32,421]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:32,421]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chrX:155270560-21768
+
+INFO [2021-01-25 14:35:34,428]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:34,429]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:35:36,435]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:36,435]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chrX_155270560_21768_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chrX_155270560_21768_h100UMC1056.png
+INFO [2021-01-25 14:35:38,488]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:38,488]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: goto chrY:59373566-1312
+
+INFO [2021-01-25 14:35:40,501]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:40,501]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: group strand
+
+INFO [2021-01-25 14:35:42,509]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:42,510]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: snapshot chrY_59373566_1312_h100UMC1056.png
+
+Snapshot: /gpfs/gsfs8/users/CGR_integration/hpv_igv/workflow/output/IGV_Snapshots/UMC1056/chrY_59373566_1312_h100UMC1056.png
+INFO [2021-01-25 14:35:44,556]  [CommandExecutor.java:235] [pool-1-thread-1]  OK
+INFO [2021-01-25 14:35:44,556]  [BatchRunner.java:72] [pool-1-thread-1]  Executing Command: exit
+
+INFO [2021-01-25 14:35:44,559]  [ShutdownThread.java:51] [Thread-2]  Shutting down
+
+IGV finished; elapsed time is:
+0:03:37.860741
+
+[Mon Jan 25 14:35:57 2021]
+Finished job 0.
+1 of 1 steps (100%) done
