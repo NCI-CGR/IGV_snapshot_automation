@@ -9,7 +9,7 @@ This snakemake pipeline is for automatically creating IGV snapshots of multiple 
 
 ## User's guide
 ### I. Input requirements
-* Edited config.yaml in directory: config/
+* Edited config/config.yaml
 * Bam files: {sample-ID}*.bam, multiple files allowed for each sample
 * Bed files: {sample-ID}.bed, only one file allowed for each sample
 * Reference genome file
