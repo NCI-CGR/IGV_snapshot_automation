@@ -1,13 +1,13 @@
 # IGV snapshot automation 
 ## Description
-This snakemake pipeline can be used to automatically create IGV snapshots for multiple samples. The final output is a pdf file containing all the snapshots for all samples. The pipeline may be run on an HPC or in a local environment. 
+This snakemake pipeline is for automatically creating IGV snapshots of multiple samples. The final output is a pdf file including all the snapshots for all samples. The pipeline may be run on an HPC or in a local environment. 
 
 ## Dependencies
 * [Snakemake](https://snakemake.readthedocs.io/en/stable/)
 * [IGV Snapshot Automator](https://github.com/stevekm/IGV-snapshot-automator) : Check "Software Requirements"
 * [ImageMagick](https://imagemagick.org/)
 
-## user's guide
+## User's guide
 ### I. Input requirements
 * Edited config.yaml in directory: config/
 * Bam files: {sample-ID}*.bam, multiple files allowed for each sample
