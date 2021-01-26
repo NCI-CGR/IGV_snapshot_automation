@@ -1,7 +1,7 @@
-path_to_software: '/data/CGR_integration/hpv_igv/IGV-snapshot-automator-master/'
-reference: '/data/CGR_integration/hpv_igv/ref/HPV_Ref_Alphas65_Pad400_hg19.fasta'
-bam_directory: '/data/CGR_integration/hpv_igv/data/09272019_serial/bam/'
-bed_direcotry: '/data/CGR_integration/hpv_igv/data/09272019_serial/igv_bed/'
+path_to_software: 'path/IGV-snapshot-automator-master/'
+reference: 'path/reference.fasta'
+bam_directory: 'path/bam/'
+bed_direcotry: 'path/bed/'
 # optional
   # output directory. default:output/ in workding directory 
 output_directory: 'output/'
