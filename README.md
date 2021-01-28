@@ -10,8 +10,8 @@ This snakemake pipeline is for automatically creating IGV snapshots of multiple 
 ## User's guide
 ### I. Input requirements
 * Edited config/config.yaml
-* Bam files: {sample}*.bam, multiple files allowed for each sample or group. 
-* Bed files: {sample}.bed, only one file allowed for each sample or group
+* Bam files: {sampleID}*.bam, multiple files allowed for each sample or group. 
+* Bed files: {sampleID}.bed, only one file allowed for each sample or group
 * Reference genome file
 ### II. Bed file format
 Three headerless columns: chromosome, start position, end position
@@ -40,7 +40,7 @@ Optional parameters:
    |--- IGV_Snapshots/
       |--- pdf/               # Final pdf file
       |--- merge_true/        # The merged snapshot of each sample or group
-      |--- {sample}/          # All snapshots of each sample or group
+      |--- {sampleID}/          # All snapshots of each sample or group
 ```
 ### V. To run on an HPC
 * Check with system administrator to make sure the xvfb-run command is available universally across the cluster.
