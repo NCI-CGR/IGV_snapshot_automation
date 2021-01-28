@@ -34,7 +34,6 @@ Optional parameters:
 * tile: Layout of snapshots in final pdf. Default: 1x4
 * mem: Memory for running IGV-snapshot-automator. Default: 16g
 ### IV. Output
-[Example](https://github.com/NCI-CGR/IGV_snapshot_automation/tree/main/output/IGV_Snapshots)
 ```bash
 |--- user/defined/output_dir/
    |--- IGV_Snapshots/
