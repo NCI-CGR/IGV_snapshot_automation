@@ -10,9 +10,9 @@ This snakemake pipeline is for automatically creating IGV snapshots of multiple 
 ## User's guide
 ### I. Input requirements
 * Edited config/config.yaml
-* Bed files: {sampleID}.bed, only one file allowed for each sample or group. The filename will be used as the sample ID (wildcards).
-* Bam files with indexes: {sampleID}*.bam, {sampleID}*.bam.bai, multiple files allowed for each sample or group. The filename(s) should start with the same string as the bed file filename of the same sample or group. 
-* Reference genome file
+* Bed files: {sampleID}.bed, only one file allowed for each sample or group. The filename will be used as the sample ID (wildcards). [Example](https://github.com/NCI-CGR/IGV_snapshot_automation/tree/main/example/data/bed)
+* Bam files with indexes: {sampleID}*.bam, {sampleID}*.bam.bai, multiple files allowed for each sample or group. The filename(s) should start with the same string as the bed file filename of the same sample or group. [Example](https://github.com/NCI-CGR/IGV_snapshot_automation/tree/main/example/data/bam)
+* Reference genome fasta file
 ### II. Bed file format
 Three headerless columns: chromosome, start position, end position
 
@@ -34,6 +34,8 @@ Optional parameters:
 * tile: Layout of snapshots in final pdf. Default: 1x4
 * mem: Memory for running IGV-snapshot-automator. Default: 16g
 ### IV. Output
+
+[Example](https://github.com/NCI-CGR/IGV_snapshot_automation/tree/main/example/output)
 ```bash
 |--- user/defined/output_dir/
    |--- IGV_Snapshots/
