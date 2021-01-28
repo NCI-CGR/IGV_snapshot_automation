@@ -38,6 +38,7 @@ Optional parameters:
 |--- user/defined/output_dir/
    |--- IGV_Snapshots/
       |--- pdf/               # Final pdf file
+      |--- merge/             # Intermediate files
       |--- merge_true/        # The merged snapshot of each sample or group
       |--- {sampleID}/          # All snapshots of each sample or group
 ```
