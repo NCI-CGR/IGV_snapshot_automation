@@ -10,8 +10,8 @@ This snakemake pipeline is for automatically creating IGV snapshots of multiple 
 ## User's guide
 ### I. Input requirements
 * Edited config/config.yaml
-* Bam files: {sampleID}*.bam, multiple files allowed for each sample or group. 
-* Bed files: {sampleID}.bed, only one file allowed for each sample or group
+* Bed files: {sampleID}.bed, only one file allowed for each sample or group. The filename will be used as the sample ID (wildcards).
+* Bam files: {sampleID}*.bam, multiple files allowed for each sample or group. The filename(s) should start with the same string as the bed file filename for each sample or group. 
 * Reference genome file
 ### II. Bed file format
 Three headerless columns: chromosome, start position, end position
