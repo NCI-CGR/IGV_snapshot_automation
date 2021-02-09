@@ -16,17 +16,26 @@ bam_dir = config["bam_directory"]
 bed_dir = config["bed_direcotry"]
 
 # Sample ID
-def parse_sampleID(fname):
+def parse_sampleID_bed(fname):
     return fname.split(bed_dir)[-1].split('.')[0].split('_')[0]
+def parse_sampleID_bam(fname):
+    return fname.split(bam_dir)[-1].split('.')[0].split('_')[0]
  
  # Bam files
-bam = sorted(glob.glob(bam_dir + '*.bam'), key=parse_sampleID)
+bam = sorted(glob.glob(bam_dir + '*.bam'), key=parse_sampleID_bam)
  # Bed files
-bed = sorted(glob.glob(bed_dir + '*.bed'),key=parse_sampleID)
+bed = sorted(glob.glob(bed_dir + '*.bed'), key=parse_sampleID_bed)
 
-d = {}
-for key, value in itertools.groupby(bed, parse_sampleID):
-    d[key] = list(value)
+if config["universal_bed"]=="yes":
+   bed_file = bed
+   d = {}
+   for key, value in itertools.groupby(bam, parse_sampleID_bam):
+       d[key] = list(value)
+elif config["universal_bed"]=="no":
+     d = {}
+     for key, value in itertools.groupby(bed, parse_sampleID_bed):
+         d[key] = list(value)
+     bed_file = bed_dir + "{sample}.bed"
 
 # Output directory
 out_dir = config.get("output_directory", "output/")
@@ -38,7 +47,7 @@ rule all:
 rule igv_snapshot:
     input: 
           bam = bam,  
-          bed = bed_dir + "{sample}.bed"
+          bed = bed_file
     output:
           out_dir + "IGV_Snapshots/merge/{sample}.png"
     params:
