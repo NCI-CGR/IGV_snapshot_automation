@@ -2,6 +2,7 @@ path_to_software: 'path/IGV-snapshot-automator-master/'
 reference: 'path/reference.fasta'
 bam_directory: 'path/bam/'
 bed_direcotry: 'path/bed/'
+universal_bed: 'no'
 # optional
   # output directory. default:output/ in workding directory 
 output_directory: 'output/'
